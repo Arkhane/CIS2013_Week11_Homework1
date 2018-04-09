@@ -62,12 +62,20 @@ public:
 		speed = 0;
 	}
 
+	//print
+	void printStatus()
+	{
+		cout << "Your diving a " << year << make << color << currentSpeed << endl;
+	}
+
 };
+
+
 
 
 int main()
 {
 	Car myFirstCar;
-	myFirstCar.
+	//myFirstCar.
 	return 0;
 }
