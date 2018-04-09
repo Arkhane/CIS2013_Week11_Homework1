@@ -5,27 +5,69 @@ using namespace std;
 
 
 
-class CarClass
+class Car
 {
-private:
-	char color, make, model, year;
-	int currentSpeed = 0;
+private:	
+	string color, model, make;
+	int year, currentSpeed;
 
 public:
 
-
-	void Attributes()
+	// default parameters
+	void Attributes(string c = "Unknown", string o = "Unknown", int y = 2010, string m = "Unknown")
 	{
-		
+		color = c;
+		model = o;
+		make = m;
+		year = y;
+		currentSpeed = 0;
 	}
 
+	string getColor()
+	{
+		return color;
+	}
+
+	string getModel()
+	{
+		return model;
+	}
+	string getMake()
+	{
+		return make;
+	}
+
+	int getYear()
+	{
+		return year;
+	}
+
+	int getCurrentSpeed()
+	{
+		return currentSpeed;
+	}
+
+	// accel
+	void accelerate()
+	{
+		speed += 5;
+	}
+	void brake()
+	{
+		if (currentSpeed >= 5)
+			currentSpeed -= 5;
+	}
+	else
+	{
+		speed = 0;
+	}
 
 };
 
 
 int main()
 {
-	CarClass myFirstCar;
+	Car myFirstCar;
 	myFirstCar.
 	return 0;
 }
