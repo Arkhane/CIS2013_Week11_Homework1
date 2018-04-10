@@ -12,6 +12,26 @@ private:
 	int year, currentSpeed;
 
 public:
+	//print
+	
+	void printSelction()
+	{
+		cout << "Select an action..." << endl;
+		cout << "-----------------------------" << endl;
+		cout << "set make (m)" << endl;
+		cout << "set model (o)" << endl;
+		cout << "set year (y)" << endl;
+		cout << "start car (s)" << endl;
+		cout << "stop car (S)" << endl;
+		cout << "print (p)" << endl;
+		cout << "-----------------------------" << endl;
+		cout << "What would you like to do?" << endl;
+	}
+
+	void printStatus()
+	{
+		cout << "Your diving a " << year << make << color << currentSpeed << endl;
+	}
 
 	// default parameters
 	void Attributes(string c = "Unknown", string o = "Unknown", int y = 2010, string m = "Unknown")
@@ -62,12 +82,9 @@ public:
 		speed = 0;
 	}
 
-	//print
-	void printStatus()
-	{
-		cout << "Your diving a " << year << make << color << currentSpeed << endl;
-	}
+	
 
+	
 };
 
 
@@ -76,6 +93,9 @@ public:
 int main()
 {
 	Car myFirstCar;
+
+	myFirstCar.printSelction()
+	
 	//myFirstCar.
 	return 0;
 }
