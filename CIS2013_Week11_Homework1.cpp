@@ -125,7 +125,11 @@ int main()
 		{
 			cout << "Your vehicle is not running... it is already stopped." << endl;
 		}
-
+		else
+		{
+			Brake();
+			cout << "Your vehicle is slowing down." << endl;
+		}
 	}
 	if (userInput == 'p')
 	{
