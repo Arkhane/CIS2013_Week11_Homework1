@@ -13,7 +13,7 @@ private:
 
 public:
 	//print	
-	void printSelction()
+	void PrintSelction()
 	{
 		cout << "Select an action..." << endl;
 		cout << "-----------------------------" << endl;
@@ -27,7 +27,7 @@ public:
 		cout << "What would you like to do?" << endl;
 	}
 
-	void printStatus()
+	void PrintStatus()
 	{
 		cout << "Your diving a " << year << make << color << currentSpeed << endl;
 	}
@@ -42,46 +42,53 @@ public:
 		currentSpeed = 0;
 	}
 
-	string getColor()
+	string GetColor()
 	{
 		return color;
 	}
 
-	string getModel()
+	string GetModel()
 	{
 		return model;
 	}
-	string getMake()
+	string GetMake()
 	{
 		return make;
 	}
 
-	int getYear()
+	int GetYear()
 	{
 		return year;
 	}
 
-	int getCurrentSpeed()
+	int GetCurrentSpeed()
 	{
 		return currentSpeed;
 	}
 
 	// accel
-	void accelerate()
+	
+	void Accelerate()
 	{
 		speed += 5;
 	}
-	void brake()
+	void Brake()
 	{
 		if (currentSpeed >= 5)
+		{
 			currentSpeed -= 5;
+		}
+		else
+		{
+			speed = 0;
+		}
 	}
-	else
-	{
-		speed = 0;
-	}
-
 	
+
+	void Start()
+	{
+		Accelerate();
+	}
 };
 
 
@@ -91,8 +98,9 @@ int main()
 {
 	char userInput;
 	Car myFirstCar;
+	int speed;
 
-	myFirstCar.printSelction();
+	myFirstCar.PrintSelction();
 	cin >> userInput;
 
 	if (userInput == 'm')
@@ -113,6 +121,10 @@ int main()
 	}
 	if (userInput == 'S')
 	{
+		if (Accelerate(speed != 0))
+		{
+			cout << "Your vehicle is not running... it is already stopped." << endl;
+		}
 
 	}
 	if (userInput == 'p')
