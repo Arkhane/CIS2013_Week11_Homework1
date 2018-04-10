@@ -12,8 +12,7 @@ private:
 	int year, currentSpeed;
 
 public:
-	//print
-	
+	//print	
 	void printSelction()
 	{
 		cout << "Select an action..." << endl;
@@ -83,8 +82,6 @@ public:
 	}
 
 	
-
-	
 };
 
 
@@ -92,10 +89,37 @@ public:
 
 int main()
 {
+	char userInput;
 	Car myFirstCar;
 
-	myFirstCar.printSelction()
-	
+	myFirstCar.printSelction();
+	cin >> userInput;
+
+	if (userInput = 'm')
+	{
+
+	}
+	if (userInput = 'o')
+	{
+
+	}
+	if (userInput = 'y')
+	{
+
+	}
+	if (userInput = 's')
+	{
+
+	}
+	if (userInput = 'S')
+	{
+
+	}
+	if (userInput = 'p')
+	{
+
+	}
+
 	//myFirstCar.
 	return 0;
 }
