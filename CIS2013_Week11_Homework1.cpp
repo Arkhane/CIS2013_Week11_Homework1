@@ -95,27 +95,27 @@ int main()
 	myFirstCar.printSelction();
 	cin >> userInput;
 
-	if (userInput = 'm')
+	if (userInput == 'm')
 	{
 
 	}
-	if (userInput = 'o')
+	if (userInput == 'o')
 	{
 
 	}
-	if (userInput = 'y')
+	if (userInput == 'y')
 	{
 
 	}
-	if (userInput = 's')
+	if (userInput == 's')
 	{
 
 	}
-	if (userInput = 'S')
+	if (userInput == 'S')
 	{
 
 	}
-	if (userInput = 'p')
+	if (userInput == 'p')
 	{
 
 	}
