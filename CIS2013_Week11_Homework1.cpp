@@ -108,15 +108,15 @@ int main()
 	char userInput;
 	char option;
 
-	House myHouse;
+	Car myCar;
 
 	while (1)
 	{
-		myHouse.PrintStatus();
-		myHouse.PrintSelction();
+		myCar.PrintStatus();
+		myCar.PrintSelction();
 		cin >> userInput;
-		myHouse.Input(userInput);
-		myHouse.PrintStatus();
+		myCar.Input(userInput);
+		myCar.PrintStatus();
 
 		cout << "do you want to keep on customize (y/n)..." << endl;
 		cin >> option;
