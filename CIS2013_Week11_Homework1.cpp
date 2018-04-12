@@ -7,9 +7,12 @@ using namespace std;
 
 class Car
 {
-private:	
-	string color, model, make;
-	int year, currentSpeed;
+private:
+	string color = "white";
+	string model = "Cccord";
+	string make = "Honda";
+	int year = 2010;
+	int currentSpeed = 0;
 
 public:
 	//print	
@@ -29,45 +32,12 @@ public:
 
 	void PrintStatus()
 	{
-		cout << "Your diving a " << year << make << color << currentSpeed << endl;
+		cout << "Your diving a " << year << make << model << color << "currentSpeed: " << currentSpeed << endl;
 	}
 
-	// default parameters
-	void Attributes(string c = "Unknown", string o = "Unknown", int y = 2010, string m = "Unknown")
-	{
-		color = c;
-		model = o;
-		make = m;
-		year = y;
-		currentSpeed = 0;
-	}
-
-	string GetColor()
-	{
-		return color;
-	}
-
-	string GetModel()
-	{
-		return model;
-	}
-	string GetMake()
-	{
-		return make;
-	}
-
-	int GetYear()
-	{
-		return year;
-	}
-
-	int GetCurrentSpeed()
-	{
-		return currentSpeed;
-	}
 
 	// accel
-	
+
 	void Accelerate()
 	{
 		speed += 5;
@@ -83,11 +53,50 @@ public:
 			speed = 0;
 		}
 	}
-	
+
 
 	void Start()
 	{
 		Accelerate();
+	}
+
+	//input
+	void Input(char x)
+	{
+		if (x == 'c')
+		{
+			cout << "set color..." << endl;
+			cin >> color;
+		}
+
+		if (x == 'o')
+		{
+			cout << "set model..." << endl;
+			cin >> model;
+		}
+
+		if (x == 'm')
+		{
+			cout << "set make..." << endl;
+			cin >> make;
+		}
+
+		if (x == 'y')
+		{
+			cout << "set year..." << endl;
+			cin >> year;
+		}
+
+		if (x == 's')
+		{
+			cout << "start the car..." << endl;
+			Accelerate();
+		}
+
+		if (x == 'S')
+		{
+
+		}
 	}
 };
 
@@ -97,45 +106,25 @@ public:
 int main()
 {
 	char userInput;
-	Car myFirstCar;
-	int speed;
+	char option;
 
-	myFirstCar.PrintSelction();
-	cin >> userInput;
+	House myHouse;
 
-	if (userInput == 'm')
+	while (1)
 	{
+		myHouse.PrintStatus();
+		myHouse.PrintSelction();
+		cin >> userInput;
+		myHouse.Input(userInput);
+		myHouse.PrintStatus();
 
-	}
-	if (userInput == 'o')
-	{
-
-	}
-	if (userInput == 'y')
-	{
-
-	}
-	if (userInput == 's')
-	{
-
-	}
-	if (userInput == 'S')
-	{
-		if (Accelerate(speed != 0))
+		cout << "do you want to keep on customize (y/n)..." << endl;
+		cin >> option;
+		if (option == 'n')
 		{
-			cout << "Your vehicle is not running... it is already stopped." << endl;
-		}
-		else
-		{
-			Brake();
-			cout << "Your vehicle is slowing down." << endl;
+			break;
 		}
 	}
-	if (userInput == 'p')
-	{
 
-	}
-
-	//myFirstCar.
 	return 0;
 }
